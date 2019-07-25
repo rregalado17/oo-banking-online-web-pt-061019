@@ -9,8 +9,8 @@ class Transfer
     @status = "pending"
   end
   
-  def valid?
-    if @sender.valid? && @receiver == open 
+  def valid_accounts?
+    if @sender.valid? && @receiver.valid?
       true 
     else
       false 
